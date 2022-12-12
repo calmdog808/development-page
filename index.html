@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Development</title>
+        <!-- import CSS styles -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="bootstrap.min.css">
+       
+        <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+        <meta name="description" content="assignment write up">
+    </head>
+
+    <body>
+        <!-- code adapted from jeff's bootstrap video -->
+        <a id = "back" href="https://calmdog808.github.io/portfolio/" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-left"> back to portfolio</i></a>
+        
+        <div class="d-flex flex-column justify-content-center align-items-center" id = "title">
+            <h1 style="font-weight: bold;">Development</h1>
+            <p class = "text-secondary">Developing (creating menu items) and developing (creating a React App) for the bakery I've always wanted to start</p>
+        </div>    
+        <div id="part 1" class="container-fluid justify-content-center align-items-center">
+            <div class="row align-items-center g-5" style="margin-left:11%;" >
+                <div class="col">
+                    <h2>Vision</h2>
+                    <p class="text-secondary">
+                        The goal here was to design an app to show list of items that you could filter and sort while learning React.
+                    </p>
+                    <p>
+                        I have no React experience and was extremely tired, but if nothing else keeps me going, pastries and an overpriced drink will. So, I chose some basic items (pastries + drinks + ice cream) that you could filter (based on type + dietary restriction) and sort (by price + bestsellers the default) and even add to a favorites list that will keep track of the total of your selections.
+                    </p>
+                    
+                </div>
+                <div class="col">
+                    <img src="tired.png" alt="diagram" style="height: 25rem; margin:3%;">
+                </div>
+                
+            </div>
+        </div>
+
+        <div class = "d-flex flex-column justify-content-center align-items-center" id = "part 2">
+            <h2>Design</h2>
+            <p class = "text-secondary">Figuring out how to make this.</p>
+            <h4>Key Parts + Considerations     <hr/></h4>
+        
+            <div class="row justify-content-md-center py-3 py-sm-5 px-3 px-sm-5 mx-xl-5" style="height: 25rem; margin-top:-3%;">
+                <div class="col">
+                    <h4>Backend</h4>
+                    <ul>
+                        <li>json data for each bakery item</li>
+                        <li>BakeryItem component to display an item card for each product</li>
+                        <li>State variables to keep track of the current filter state, sort state, and state of the favorites list</li>
+                        <li>Functions for both setting the state based off an event and then adjusting which items are shown based on the state</li>
+                        <li>Reseting the states except for the favorities when someone clears filters</li>
+                        <li>Logic to aggregate the list of favorites and their total price</li>
+                    </ul>               </div>
+                <div class="col">
+                    <h4>Frontend</h4>
+                    <ul>
+                        <li>MUI cards and grid system to display items with an image, description, and button in an organized manner</li>
+                        <li>Separate side bars for filters and the aggregator, so they are not cramped</li>
+                        <li>Nav selection (for type) and radio selection (for sort) to select one option bc I wanted to try both types</li>
+                        <li>Checkbox selection for dietary restriction because someone can have multiple</li>
+                        <li>Add button turns into remove so you can't add duplicates to your favorites list</li>
+                        <li>Minimalistic grid layout so the images pop!</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class = "d-flex flex-column justify-content-center align-items-center" id = "part 3">
+                <h2>Final Product</h2>
+                <p class = "text-secondary">Yea</p>
+                <img  src="final.png" alt="final site" style="height: 35rem;  border: 0.5px solid lightslategray;">
+                <br>
+                <p style="text-align:center">So, I actually had to code it. She's something. Look 
+                    <a href="https://calmdog808.github.io/development-project/" target="_blank">here</a> if you want.
+                    <br>Honestly, I liked learning React and that it has so many design tools, so I didn't have to code a lot of components from scratch.
+                    <br>  Not sure still what exactly a component is, but I know enough to start a bakery now.
+                    <br>&#127874;
+                </p>
+                <br>
+            </div>  
+            </div>
+     
+        
+        <script>
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+              if (prevScrollpos > currentScrollPos) {
+                document.getElementById("back").style.top = "18px";
+              } else {
+                document.getElementById("back").style.top = "-50px";
+              }
+              prevScrollpos = currentScrollPos;
+            }
+            </script>
+            
+    </body>
+</html>
